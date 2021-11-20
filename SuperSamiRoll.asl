@@ -25,6 +25,7 @@ reset
 {
     if(current.gameStart == 0)
     {
+        vars.allowSplit = false;
         return true;
     }
 }

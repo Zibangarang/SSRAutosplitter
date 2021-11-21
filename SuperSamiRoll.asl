@@ -57,6 +57,11 @@ split
 //Only allow a new split after a level has been loaded in AND the timer has been verified to be reset
 update
 {
+    if(current.gameStart == 0)
+    {
+        vars.allowSplit = false;
+    }
+
     if(!current.stageCleared && current.currentLevel < 500 && current.levelTime < 0.6 && current.levelTime > 0.2)
     {
         vars.allowSplit = true;
